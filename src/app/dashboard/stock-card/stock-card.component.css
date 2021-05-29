@@ -1,0 +1,73 @@
+.stock-card-container {
+  width: 21.375rem;
+  height: 13.8125rem;
+  padding: 1rem;
+  margin: 0 1rem 2rem;
+  background-color: var(--secundary-color);
+  border-radius: 4px;
+  border-left: solid 0.3rem var(--positive-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: box-shadow 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.stock-card-container:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.stock-card-container.negative-variation {
+  border-left-color: var(--negative-color);
+}
+
+.stock-card-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stock-card-header h2, p {
+  margin: 0;
+}
+
+.stock-card-header h2 {
+  color: var(--text-color);
+}
+
+.stock-card-header p {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--text-color-light);
+}
+
+.stock-card-values {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+}
+
+.stock-card-values .stock-value {
+  font-size: 3rem;
+  margin: 0 1rem;
+  color: var(--text-color);
+}
+
+.stock-card-values .stock-variation {
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  align-self: flex-end;
+  background-color: var(--positive-color);
+  color: var(--secundary-color);
+}
+
+.stock-card-container.negative-variation .stock-card-values .stock-variation {
+  background-color: var(--negative-color);
+}
